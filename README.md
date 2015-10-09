@@ -27,9 +27,10 @@ properties.
 ### Actually use the event emitter
 *tl;dr: It works like every event emitter in JavaScript.*
 
-You can add listeners with `.on('event name', handler)` and remove them with
-`.off('event name')` or `.off('event name', handler)`.
-To raise an event, use `.trigger('event name')`.
+* Add listeners with `.on('event name', handler)`
+* Remove all event listeners for an event with `.off('event name')`
+* Remove a specific event listener with `.off('event name', handler)`
+* Remove all event listeners with `.off()`
 
 ## License
 This library (if 30 lines of code are enough to even call it a "library") is
