@@ -81,3 +81,16 @@ test 'arguments are collected and passed to the event handler', (t) ->
 
   obj.trigger 'test', 'a', 'b', 'c'
   t.end()
+
+test 'it does not fail when triggering events without handlers', (t) ->
+  obj = {}
+  EventEmitter.installOn obj
+  obj.trigger 'unknownEvent', 'some', 'arguments'
+  t.end()
+
+test 'it does not fail when removing handlers of an event that was never registered', (t) ->
+  obj = {}
+  EventEmitter.installOn obj
+  obj.off 'unknownEvent'
+  obj.off 'unknownEvent2', -> console.log 'handler'
+  t.end()

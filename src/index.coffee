@@ -7,6 +7,7 @@ class EventEmitter
     return this
 
   off: (eventName, listeners...) ->
+    return if not @_events
     if eventName
       return if not @_events[eventName]
       if listeners.length > 0
@@ -17,7 +18,7 @@ class EventEmitter
       @_events = []
 
   trigger: (eventName, args...) ->
-    if @_events[eventName]
+    if @_events and @_events[eventName]
       handler(args) for handler in @_events[eventName]
 
 EventEmitter.installOn = (object) ->
