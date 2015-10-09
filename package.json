@@ -1,0 +1,28 @@
+{
+  "name": "event-emitter",
+  "version": "1.0.0",
+  "description": "A tiny event-emitter for javascript.\"",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "coffee ./test/test.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leMaik/event-emitter.git"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "node",
+    "browser"
+  ],
+  "author": "leMaik <mmarschner@welfenlab.de>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/leMaik/event-emitter/issues"
+  },
+  "homepage": "https://github.com/leMaik/event-emitter#readme",
+  "devDependencies": {
+    "ava": "^0.2.0"
+  }
+}
